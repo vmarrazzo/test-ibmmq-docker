@@ -1,0 +1,143 @@
+{
+	"version": 0.1,
+	"tabs": [{
+		"title": "IBM MQ vmarrazzo Container",
+		"numColumns": 2,
+		"model": {
+			"title": "",
+			"rows": [{
+				"columns": [{
+					"widgets": [{
+						"type": "channel",
+						"config": {
+							"selectedQM": "<QM_NO_TLS>",
+							"showSysObjs": false,
+							"sizex": 1,
+							"sizey": 1,
+							"subType": "all"
+						},
+						"title": "Channels on <QM_NO_TLS>",
+						"titleTemplateUrl": "adf/templates/widget-title.html",
+						"gridsterrow": 1,
+						"gridstercol": 0
+					},
+					{
+						"type": "channel",
+						"config": {
+							"selectedQM": "<QM_TLS>",
+							"showSysObjs": false,
+							"sizex": 1,
+							"sizey": 1,
+							"subType": "all"
+						},
+						"title": "Channels on <QM_TLS>",
+						"titleTemplateUrl": "adf/templates/widget-title.html",
+						"gridsterrow": 1,
+						"gridstercol": 1
+					},
+					{
+						"type": "queue",
+						"config": {
+							"selectedQM": "<QM_NO_TLS>",
+							"showSysObjs": false,
+							"sizex": 1,
+							"sizey": 1,
+							"subType": "all"
+						},
+						"title": "Queues on <QM_NO_TLS>",
+						"titleTemplateUrl": "adf/templates/widget-title.html",
+						"gridsterrow": 2,
+						"gridstercol": 0
+					},
+					{
+						"type": "queue",
+						"config": {
+							"selectedQM": "<QM_TLS>",
+							"showSysObjs": false,
+							"sizex": 1,
+							"sizey": 1,
+							"subType": "all"
+						},
+						"title": "Queues on <QM_TLS>",
+						"titleTemplateUrl": "adf/templates/widget-title.html",
+						"gridsterrow": 2,
+						"gridstercol": 1
+					},
+					{
+						"type": "queuemanager",
+						"gridstercol": 0,
+						"gridsterrow": 0,
+						"config": {
+							"type": "local",
+							"sizex": 1,
+							"sizey": 1,
+							"customTitle": "Queue Manager"
+						},
+						"title": "Queue Manager",
+						"titleTemplateUrl": "adf/templates/widget-title.html"
+					},
+					{
+						"type": "chart",
+						"config": {
+							"sizex": 1,
+							"sizey": 1,
+							"selectedResourceClassIndex": 2,
+							"selectedResourceTypeIndex": 3,
+							"selectedResourceElementIndex": 0,
+							"selectedCol": [{
+								"name": "Blue",
+								"rgb": "#4178BE"
+							},
+							{
+								"name": "Green",
+								"rgb": "#4B8400"
+							},
+							{
+								"name": "Orange",
+								"rgb": "#FF7832"
+							},
+							{
+								"name": "Purple",
+								"rgb": "#9855D4"
+							},
+							{
+								"name": "Yellow",
+								"rgb": "#EFC100"
+							},
+							{
+								"name": "Red",
+								"rgb": "#FF5050"
+							},
+							{
+								"name": "Teal",
+								"rgb": "#008571"
+							},
+							{
+								"name": "Magenta",
+								"rgb": "#DB2780"
+							},
+							{
+								"name": "Gray",
+								"rgb": "#AEAEAE"
+							},
+							{
+								"name": "Gray",
+								"rgb": "#777677"
+							}],
+							"selectedQMList": ["<QM_TLS>", "<QM_NO_TLS>"],
+							"selectedSource": "com.ibm.mq.monitoring.qmgr",
+							"invalidConfig": false,
+							"chartTitle": "Interval total MQPUT/MQPUT1 count"
+						},
+						"title": "Interval total MQPUT/MQPUT1 count",
+						"titleTemplateUrl": "adf/templates/widget-title.html",
+						"gridsterrow": 0,
+						"gridstercol": 1
+					}]
+				}]
+			}],
+			"titleTemplateUrl": "adf/templates/dashboard-title.html"
+		},
+		"isMobile": false
+	}]
+}

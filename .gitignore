@@ -1,0 +1,8 @@
+# key archive file
+*.jks
+*.pfx
+
+# execution folder
+client/
+server/
+shared/
