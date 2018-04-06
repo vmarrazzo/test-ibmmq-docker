@@ -78,18 +78,9 @@ docker run \
   -Jserver.rmi.ssl.disable=true \
   -R $(echo $(printf ",%s" "${SERVER_IPS[@]}") | cut -c 2-) \
   -Gunder_test_host=$WMQ_IP \
-  -Jperfmon_host=$WMQ_IP \
   -t ${jmeter_path}/ibmmq_docker_4.0_PerfMon.jmx \
   -l ${jmeter_path}/client/result_${timestamp}.jtl \
   -j ${jmeter_path}/client/jmeter_${timestamp}.log 
- 
-### --rm \
-###  ${__P(wmq_address,127.0.0.1)}
-### -JforcePerfmonFile=true \
-### -Jperfmon_file=${jmeter_path}/client/result_perfmon_${timestamp}.jtl \
-### --env JMETER_DEBUG=true \
-###   -LDEBUG \
-### -Jperfmon_file=${jmeter_path}/client/result_perfmon_${timestamp}.jtl \
  
 # 6
 mv ./shared/curr_perfMon_report.jtl ./client/result_perfmon_${timestamp}.jtl
