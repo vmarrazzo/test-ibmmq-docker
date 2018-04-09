@@ -42,7 +42,7 @@ docker run \
 echo "Wait time for IBM MQ boot procedure...."  
 read -rsp $'Press any key to continue...\n' -n1 key
   
-# 4
+# 5
 echo "Create servers"
 for IP_ADD in "${SERVER_IPS[@]}"
 do
@@ -62,7 +62,7 @@ done
 echo "Wait time after JMeter Server boot procedure...."  
 read -rsp $'Press any key to continue...\n' -n1 key
   
-# 5 
+# 6 
 echo "Create client and execute test"
 docker run \
   --net $TEST_NET --ip $CLIENT_IP \
@@ -82,5 +82,5 @@ docker run \
   -l ${jmeter_path}/client/result_${timestamp}.jtl \
   -j ${jmeter_path}/client/jmeter_${timestamp}.log 
  
-# 6
+# 7
 mv ./shared/curr_perfMon_report.jtl ./client/result_perfmon_${timestamp}.jtl
